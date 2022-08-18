@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense_tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&family=IBM+Plex+Sans:wght@300&family=Indie+Flower&family=Montserrat:wght@300&family=Redressed&family=Roboto&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="exp_track.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <div class="balance-container">
+            <h2>Your balance</h2>
+            <div id="balance">$1000</div>
+        </div>
+        <div class="inc-exp-container">
+            <div class="income-container">
+                <h2>Income</h2>
+                <div id="income">$600</div>
+            </div>
+            <div class="expense-container">
+                <h2>Expense</h2>
+                <div id="expense">$500</div>
+            </div>
+        </div>
+        <div class="transaction-container">
+            <h2>Transaction history</h2>
+            <ul id="transactions">
+    
+            </ul>
+        </div>
+        <div class="form-container">
+            <h2>add new transaction</h2>
+            <form onsubmit="return false">
+                <label for="name">Text</label>
+                <input type="text" id="name">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount">
+                <button onclick="add('income')" id="income-btn">Add Income</button>
+                <button onclick="add('expense')" id="expense-btn">Add Expense</button>
+            </form>
+        </div>
+    </div>
+    <script src="exp_track.js"></script>
+</body>
+
+</html>
